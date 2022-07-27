@@ -1,0 +1,180 @@
+{
+	"info": {
+		"_postman_id": "43d80090-3049-43a5-8627-d500007ea93d",
+		"name": "WSDL",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15352082"
+	},
+	"item": [
+		{
+			"name": "Hello",
+			"item": [
+				{
+					"name": "sayHello",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/xml; charset=utf-8"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <sayHello xmlns=\"http://ws.jaxwscxf.kuropatin.by/\">\n      <name xmlns=\"\">ws user</name>\n    </sayHello>\n  </soap:Body>\n</soap:Envelope>\n",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BaseUrl}}/ws/Hello",
+							"host": [
+								"{{BaseUrl}}"
+							],
+							"path": [
+								"ws",
+								"Hello"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "sayHello response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "text/xml; charset=utf-8"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <sayHello xmlns=\"http://ws.jaxwscxf.kuropatin.by/\">\n      <name>string</name>\n    </sayHello>\n  </soap:Body>\n</soap:Envelope>\n",
+									"options": {
+										"raw": {
+											"language": "xml"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/ws/Hello",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"ws",
+										"Hello"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "xml",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/xml; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <sayHelloResponse xmlns=\"http://ws.jaxwscxf.kuropatin.by/\">\n      <return>string</return>\n    </sayHelloResponse>\n  </soap:Body>\n</soap:Envelope>\n"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "GoodBye",
+			"item": [
+				{
+					"name": "sayGoodBye",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/xml; charset=utf-8"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <sayGoodBye xmlns=\"http://ws.jaxwscxf.kuropatin.by/\">\n      <name xmlns=\"\">ws user</name>\n    </sayGoodBye>\n  </soap:Body>\n</soap:Envelope>\n",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BaseUrl}}/ws/GoodBye",
+							"host": [
+								"{{BaseUrl}}"
+							],
+							"path": [
+								"ws",
+								"GoodBye"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "sayGoodBye response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "text/xml; charset=utf-8"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <sayGoodBye xmlns=\"http://ws.jaxwscxf.kuropatin.by/\">\n      <name>string</name>\n    </sayGoodBye>\n  </soap:Body>\n</soap:Envelope>\n",
+									"options": {
+										"raw": {
+											"language": "xml"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/ws/GoodBye",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"ws",
+										"GoodBye"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "xml",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/xml; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <sayGoodByeResponse xmlns=\"http://ws.jaxwscxf.kuropatin.by/\">\n      <return>string</return>\n    </sayGoodByeResponse>\n  </soap:Body>\n</soap:Envelope>\n"
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "BaseUrl",
+			"value": "localhost:8080"
+		}
+	]
+}
